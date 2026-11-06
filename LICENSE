@@ -1,0 +1,77 @@
+非商业使用许可 / Non-Commercial Use License
+
+Copyright (c) 2026 dangdongrui-cpu
+
+本许可适用于 dsh-pet-bridge 项目（下称「本软件」）的全部原创代码、文档与配置，NOTICE 中列明的第三方移植部分除外（该部分适用其自身许可）。请在使用、复制、修改或分发本软件前阅读本许可。你一旦行使本许可授予的权利，即视为接受本许可。
+
+一、授予的权利
+
+1. 免费使用：你可以出于任何非商业目的，免费使用本软件，包括个人使用、学习与研究。
+2. 修改：你可以修改本软件的源代码，制作衍生作品。
+3. 再分发：你可以复制并再分发本软件及其修改版本，无论是否收取分发成本（不得因此获利）。
+4. 上述权利的前提是：在软件的所有副本或实质性部分中，完整保留本许可全文，以及原始版权声明与作者署名。
+
+二、禁止的行为
+
+1. 商业用途：不得将本软件或其衍生作品用于任何商业目的。
+2. 本许可所称「商业用途」包括但不限于：销售本软件或其衍生作品；将其打包、捆绑或作为服务的一部分收费提供；将其用于商业产品、商业服务或创收业务；以本软件为基础提供付费的技术支持、托管或咨询（经版权人书面同意的除外）。
+3. 不得移除、遮蔽或篡改本软件的版权声明、作者署名、NOTICE 与本许可文件。
+4. 不得以任何方式暗示获得版权人的背书，除非事先取得书面许可。
+
+三、终止
+
+你一旦违反本许可的任何条款，本许可授予你的全部权利立即自动终止。你须停止使用并销毁所有副本。版权人可另行书面授权。
+
+四、免责声明
+
+本软件按「现状」提供，不附带任何明示或默示的担保，包括但不限于适销性、特定用途适用性和不侵权的担保。在任何情况下，版权人均不对因使用或无法使用本软件而产生的任何索赔、损害或其他责任负责，无论是合同之诉、侵权之诉还是其他。
+
+五、其他
+
+1. 本许可未明确授予的权利均由版权人保留。
+2. 如需商业授权，请联系版权人 dangdongrui-cpu。
+3. 本许可中英文本同时提供；两者如有歧义，以中文文本为准。
+
+---
+
+Non-Commercial Use License
+
+Copyright (c) 2026 dangdongrui-cpu
+
+This license applies to all original code, documentation and configuration of the dsh-pet-bridge project (the "Software"), except for the third-party portions identified in the NOTICE file, which remain under their own licenses. Please read this license before using, copying, modifying or distributing the Software. By exercising any right granted here, you accept this license.
+
+1. Granted rights
+
+1.1 Free use. You may use the Software free of charge for any non-commercial purpose, including personal use, study and research.
+
+1.2 Modification. You may modify the source code and create derivative works.
+
+1.3 Redistribution. You may copy and redistribute the Software and modified versions, provided you charge no more than the cost of distribution and derive no profit from it.
+
+1.4 Conditions. The rights above are conditioned on retaining, in all copies or substantial portions of the Software, the full text of this license together with the original copyright notice and author attribution.
+
+2. Prohibited acts
+
+2.1 Commercial use. You may not use the Software or any derivative work for any commercial purpose.
+
+2.2 "Commercial purpose" includes, without limitation: selling the Software or derivative works; packaging, bundling or offering it as part of any paid service or product; using it in a commercial product, commercial service or revenue-generating business; and providing paid support, hosting or consulting based on the Software, unless the copyright holder has given prior written consent.
+
+2.3 You may not remove, obscure or alter the copyright notice, author attribution, NOTICE file or this license.
+
+2.4 You may not imply endorsement by the copyright holder without prior written permission.
+
+3. Termination
+
+Your rights under this license terminate automatically and immediately if you breach any term. You must stop using the Software and destroy all copies. The copyright holder may grant separate written permission.
+
+4. Disclaimer of warranty
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+5. Miscellaneous
+
+5.1 All rights not expressly granted are reserved by the copyright holder.
+
+5.2 For commercial licensing, please contact the copyright holder, dangdongrui-cpu.
+
+5.3 This license is provided in both Chinese and English. In case of any discrepancy, the Chinese text prevails.
