@@ -1,0 +1,92 @@
+# NOTICE
+
+本文件说明 `dsh-pet-bridge` 中包含的第三方代码出处与许可。使用时请一并保留本文件。
+
+- 本项目名称：`dsh-pet-bridge`
+- 版本：`0.2.0`
+- 本项目许可：非商业使用许可，见仓库根目录 [LICENSE](LICENSE)
+
+---
+
+## 一、移植自 dsh-im 的 Markdown 分片逻辑（MIT License）
+
+### 来源
+
+| 项目 | 内容 |
+|---|---|
+| 上游项目 | **dsh-im**（DeepSeek Harness 的多 IM 渠道插件） |
+| npm 包名 | `@xmanrui/dsh-im` |
+| 上游仓库 | https://github.com/xmanrui/dsh-im |
+| 上游文件 | `shared/markdown-chunks.mjs` |
+| 上游许可 | **MIT License**（见上游仓库 `LICENSE`） |
+| 版权人 | dsh-im 作者（copyright holder 以上游仓库 `LICENSE` 所载为准） |
+
+### 移植范围
+
+本仓库的 `lib/markdown-chunks.mjs`（338 行）移植自上述上游文件的**分片算法**，包括：
+
+- 结构感知的分片入口 `chunkMarkdownParts(text, limit)`（默认上限 `DEFAULT_CHUNK_LIMIT = 4_500`）；
+- 围栏代码块（``` / ~~~）不切断、按需补围栏续接；
+- 表格按行切分、超长单元格再切；
+- 超长段落按安全切点切分，避开 UTF-16 代理对；
+- 返回 `{ markdown, plain }` 两份文本。
+
+**移植时未做逻辑改动**，文件内容与移植来源逐字节一致。SHA-256：
+
+```
+85DBA9202463C31E5783227874347B7DDE1D27C906FDE1221E433E6C88C0AD2A
+```
+
+可用于与上游 `shared/markdown-chunks.mjs` 做完整性比对。
+
+> 待确认：上游用于移植的 commit / 发布版本尚未记录；如需严格追溯，建议补一个上游 commit hash。
+
+### 在本仓库中的引用位置
+
+| 位置 | 说明 |
+|---|---|
+| `lib/markdown-chunks.mjs:236` | `export function chunkMarkdownParts(text, limit = DEFAULT_CHUNK_LIMIT)`，移植而来的入口 |
+| `lib/markdown-chunks.mjs:2` | `const DEFAULT_CHUNK_LIMIT = 4_500`，单条上限 |
+| `lib/markdown-chunks.mjs:336` | `export function chunkMarkdownText(...)`，同一来源的附带导出 |
+| `lib/qq.js:18` | `import { chunkMarkdownParts } from './markdown-chunks.mjs'` |
+| `lib/qq.js:337` | `const chunks = chunkMarkdownParts(body)`，QQ 长回复发前先分片 |
+| `lib/qq.js:345-349` | 按分片逐条发送，条间留间隔 |
+
+本插件与 dsh-im 的关系仅为上述代码移植：不复制 dsh-im 的品牌、渠道适配器或其他功能，二者互不隶属。dsh-im 的 MIT 许可不改变本项目自身的非商业许可；但就移植部分而言，仍适用其 MIT 条款。
+
+### MIT License（上游许可原文）
+
+```
+MIT License
+
+Copyright (c) dsh-im authors (see the upstream repository's LICENSE file)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+---
+
+## 二、本项目其余部分
+
+除上节列明的移植文件外，其余代码、文档与配置版权归 **dangdongrui-cpu** 所有（`Copyright (c) 2026 dangdongrui-cpu`），按 [LICENSE](LICENSE) 的《非商业使用许可》授权：
+
+- 允许：免费使用、修改、再分发（须保留版权声明与本许可）；
+- 禁止：任何商业用途。
+
+如需商业授权，请联系版权人。
